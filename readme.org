@@ -1,4 +1,4 @@
-#+title: Homework 4: Greedy Algorithm
+#+title: Homework 4: Greedy Algorithms
 #+date: Due 25 April 2025
 #+setupfile: ~/notes/tufte-css.org
 #+options: toc:nil
