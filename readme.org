@@ -1,0 +1,85 @@
+#+title: Homework 4: Greedy Algorithm
+#+date: Due 25 April 2025
+#+setupfile: ~/notes/tufte-css.org
+#+options: toc:nil
+#+options: num:0
+#+options: html-postamble:nil
+#+options: ^:{}
+#+startup: showall
+
+* Instructions
+
+Write a set of programs that solve the following problems. A set of  basic test inputs for each problem is included in the ~./tests/~ directory with the name "~<problem>.input~". You can verify your output by comparing it corresponding "~<problem>.output~" file. You may hardcode the file path for these tests in your code. 
+
+Submit your program via GitHub Classroom.
+
+* Disjoint-Set
+Implement a Disjoint-Set / Union-Find structure in your programming language of choice using an array (or equivalent structure in your language) and implement the following operations:
+- ~find~ (return the root of the set the parameter item belongs to)
+- ~union~ (join the sets of the parameters)
+The primary source file for this problem should be named ~disjointset~ (with appropriate capitalization and extension for your programming language).
+
+* Scheduling
+Implement in your favorite programming language the GreedyDiff and GreedyRatio algorithms from Section 13.3 for minimizing the weighted sum of completion times. The input for this problem will be a file containing the number of jobs on the first line and then the weights and lengths of each job in order, one per line. Print the difference between the weighted sum of completion times of the schedule output by the GreedyDiff and GreedyRatio algorithms to standard out. Name your program ~scheduling~.
+
+Sample Input:
+#+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/scheduling.input
+12
+8 50
+74 59
+31 73
+45 79
+24 10
+41 66
+93 43
+88 4
+28 30
+41 13
+4 70
+10 58
+#+end_src
+
+Sample Output:
+#+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/scheduling.output
+1368
+#+end_src
+
+* Huffman Encoding
+ Implement in your favorite programming language the Huffman algorithm from Section 14.3 for the optimal prefix-free code problem. The input for this problem will be a file where the first line contains the number of symbols and subsequent lines contain the weight/frequency of each symbol, one per line. Print the minimum and maximum code lengths to standard out. Name your program ~huffman~ for this problem.
+
+Sample Input:
+ #+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/huffman.input
+10
+37
+59
+43
+27
+30
+96
+96
+71
+8
+76
+ #+end_src
+
+ Sample Output:
+ #+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/huffman.output
+2, 5
+ #+end_src
+
+* Minimum Spanning Trees
+Implement in your favorite programming language the heap-based version of Prim's Algorithm and the disjoint-set-based version of Kruskal's Algorithm. Note that edge costs can be negative, and are not necessarily distinct. Print the total cost of the minimum spanning tree to standard out. Your programs for this problem should be named ~prim~ and ~kruskal~.
+
+#+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/mst.input 
+1, 2, 3, 4, 5, 6
+0, 6, 0, 5, 4, 0
+6, 0, 5, 1, 2, 3
+0, 5, 0, 0, 0, 4
+5, 1, 0, 0, 2, 0
+4, 2, 0, 2, 0, 4
+0, 3, 4, 0, 4, 0
+#+end_src
+
+#+begin_src example :tangle /home/mbutler/workspace/cs2123/greedy/tests/mst.output
+14
+#+end_src
